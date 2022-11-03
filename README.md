@@ -46,6 +46,13 @@ To compile, go to the program path and run:
 ```
 make
 ``` 
+To compile the bonus, go to the program path and run:
+
+```
+make bonus
+``` 
+with make bonus, a checker executable will be created. This checker, executed with the main program, will tell if the sorting done is actually sorted correctly or not.
+
 #### 2. Executing the program
 
 To execute the program, run:
@@ -57,5 +64,5 @@ where ```$ARG``` is a space separated list of integers, e.g. ```ARG="1 5 2 4 3"`
 
 ## 🛠️ USED ALGORITHM
 
-I used a variation of the [Quicksort](https://en.wikipedia.org/wiki/Quicksort) algorithm. Basicly I pick small chunks of numbers. For example: if the pool of numbers is 100, I will divide it in 10 chunks of 10 numbers each. It varies according to the pool number. The first chunk has 10 smallest numbers of the pool. I then push the smallest ones to stack b. I don't push the smallest number of all first but the the smallest that is closest to be pushed, this saves a lot of moves. While I'm rotating the stack a to push numbers to b, b is also being rotated to sort the numbers that are already there. When the rotation in a and in b match, I use the command to rotate both stack at the same time and save a move. My algorithm performed maximum in all tests except the last one, it performed a level bellow max. 
+I used a variation of the [Quicksort](https://en.wikipedia.org/wiki/Quicksort) algorithm. Basicly I pick small chunks of numbers. For example: if the pool of numbers is 100, I will divide it in 10 chunks of 10 numbers each. It varies according to the pool number. The first chunk has the 10 smallest numbers of the pool. I then push the smallest ones to stack b. I don't push the smallest number of all first but the the smallest that is closest to be pushed, this saves a lot of moves. While I'm rotating the stack a to push numbers to b, b is also being rotated to sort the numbers that are already there. When the rotation in a and in b match, I use the command to rotate both stack at the same time and save a move. My algorithm performed maximum in all tests except the last one, it performed a level bellow max. 
 
